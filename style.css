@@ -1,0 +1,77 @@
+/* css/style.css */
+:root{
+  --accent:#2b6cb0;
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:#111827;
+  line-height:1.4;
+}
+.container{
+  max-width:980px;
+  margin:32px auto;
+  padding:18px;
+}
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+.brand{font-weight:600; color:var(--accent); font-size:20px}
+.nav a{ margin-left:12px; text-decoration:none; color:var(--accent)}
+
+/* Card */
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(20,20,40,0.04);
+}
+
+/* Forms */
+.form-row{ margin-bottom:12px; display:flex; flex-direction:column;}
+label{ font-size:14px; margin-bottom:6px; color:var(--muted) }
+input[type="text"], input[type="email"], input[type="password"], select, textarea{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  font-size:14px;
+  width:100%;
+}
+button{
+  background:var(--accent);
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+}
+small.hint{ color:var(--muted);}
+
+/* Two column grid */
+.grid-2{ display:grid; grid-template-columns:1fr 320px; gap:18px;}
+@media(max-width:880px){ .grid-2{ grid-template-columns:1fr; } }
+
+/* Table */
+table{ width:100%; border-collapse:collapse; font-size:14px }
+th,td{ padding:10px 8px; text-align:left; border-bottom:1px solid #f0f2f5; }
+.status-pending{ color:#d97706; font-weight:600 }
+.status-validated{ color:#059669; font-weight:600 }
+.status-rejected{ color:#dc2626; font-weight:600 }
+
+/* small utility */
+.text-muted{ color:var(--muted); font-size:13px }
+.center { text-align:center; }
+.logo{ display:flex; gap:8px; align-items:center; }
+.logo img{ height:36px; border-radius:6px; }
+
+/* small file-preview */
+.preview-img{ max-width:120px; max-height:80px; object-fit:cover; border-radius:6px; border:1px solid #eee; }

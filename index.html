@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Skill Tracker — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Skill Tracker</div>
+      <div class="nav"><a href="register.html">Register</a></div>
+    </div>
+
+    <div class="card" style="max-width:520px;margin:0 auto;">
+      <h3>Login</h3>
+      <form id="login-form">
+        <div class="form-row"><label>Email</label><input type="email" name="email" required></div>
+        <div class="form-row"><label>Password</label><input type="password" name="password" required></div>
+        <div class="form-row">
+          <label>Role</label>
+          <select name="role">
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+          </select>
+        </div>
+        <div class="form-row"><button type="submit">Login</button></div>
+        <div class="form-row"><small class="hint">For testing, register first via Register page.</small></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

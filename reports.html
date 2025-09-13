@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reports</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Skill Tracker</div>
+      <div class="nav"><a href="/index.html">Home</a></div>
+    </div>
+
+    <div id="reports-area" class="card">
+      <h3>Reports & Analytics</h3>
+      <div style="display:flex; gap:16px; margin-bottom:12px;">
+        <div class="card" style="padding:12px;">
+          <div class="text-muted">Total submissions</div>
+          <div id="total-skills" style="font-weight:700; font-size:20px">0</div>
+        </div>
+        <div class="card" style="padding:12px;">
+          <div class="text-muted">Pending</div>
+          <div id="pending-count" style="font-weight:700; font-size:20px">0</div>
+        </div>
+        <div class="card" style="padding:12px;">
+          <div class="text-muted">Validated</div>
+          <div id="validated-count" style="font-weight:700; font-size:20px">0</div>
+        </div>
+      </div>
+
+      <canvas id="skillsChart" style="max-width:700px;"></canvas>
+      <div id="charts-fallback" class="text-muted" style="margin-top:10px"></div>
+    </div>
+  </div>
+
+  <!-- Chart.js CDN (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
