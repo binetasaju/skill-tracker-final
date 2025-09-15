@@ -2,25 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Skill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <h2>Add Skill</h2>
-  <form id="add-skill-form">
-    <input type="text" name="skill_name" placeholder="Skill Name" required>
-    <select name="level">
-      <option value="Beginner">Beginner</option>
-      <option value="Intermediate">Intermediate</option>
-      <option value="Advanced">Advanced</option>
-    </select>
-    <input type="file" name="evidence">
-    <button type="submit">Save</button>
-  </form>
-
-  <a href="home.html">⬅ Back to Home</a>
-
-  <script src="../assets/js/storage.js"></script>
-  <script src="../assets/js/student.js"></script>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Add a New Skill</div>
+      <div class="nav"><a href="student-home.html">Back to Dashboard</a></div>
+    </div>
+    <div class="card">
+      <form id="add-skill-form">
+        <div class="form-row">
+          <label>Skill Name (e.g., Python, Public Speaking)</label>
+          <input type="text" name="skill_name" required>
+        </div>
+        <div class="form-row">
+          <label>Proficiency Level</label>
+          <select name="level" required>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Evidence File (Optional Certificate, Screenshot, etc.)</label>
+          <input type="file" name="evidence">
+        </div>
+        <button type="submit">Submit Skill for Validation</button>
+      </form>
+    </div>
+  </div>
+  <script src="../assets/js/storage.js" defer></script>
+  <script src="../assets/js/student.js" defer></script>
 </body>
 </html>
