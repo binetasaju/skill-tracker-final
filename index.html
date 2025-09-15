@@ -1,35 +1,36 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Skill Tracker — Login</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Login | Skill Tracker</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="brand">Skill Tracker</div>
-      <div class="nav"><a href="register.html">Register</a></div>
-    </div>
+  <h2>Login</h2>
+  <form id="login-form">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <select name="role">
+      <option value="student">Student</option>
+      <option value="faculty">Faculty</option>
+    </select>
+    <button type="submit">Login</button>
+  </form>
 
-    <div class="card" style="max-width:520px;margin:0 auto;">
-      <h3>Login</h3>
-      <form id="login-form">
-        <div class="form-row"><label>Email</label><input type="email" name="email" required></div>
-        <div class="form-row"><label>Password</label><input type="password" name="password" required></div>
-        <div class="form-row">
-          <label>Role</label>
-          <select name="role">
-            <option value="student">Student</option>
-            <option value="faculty">Faculty</option>
-          </select>
-        </div>
-        <div class="form-row"><button type="submit">Login</button></div>
-        <div class="form-row"><small class="hint">For testing, register first via Register page.</small></div>
-      </form>
-    </div>
-  </div>
+  <h2>Register</h2>
+  <form id="register-form">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="text" name="department" placeholder="Department">
+    <select name="role">
+      <option value="student">Student</option>
+      <option value="faculty">Faculty</option>
+    </select>
+    <button type="submit">Register</button>
+  </form>
 
-  <script src="main.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
