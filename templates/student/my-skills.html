@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+  <style>
+    /* New style for the feedback block */
+    .skill-feedback {
+      background-color: #f1f5f9; /* A light grey background */
+      border: 1px solid var(--border-color);
+      border-top: none; /* Attach it visually to the card above */
+      padding: 12px 16px;
+      margin-top: -12px; /* Pull it up to connect with the skill-card */
+      margin-bottom: 12px;
+      border-radius: 0 0 8px 8px; /* Round the bottom corners */
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">My Submitted Skills</div>
+      <div class="nav"><a href="{{ url_for('student_home_page') }}">Back to Dashboard</a></div>
+    </div>
+    <div class="card">
+      <div id="skills-list">
+        <!-- The list of skills and feedback will be generated here by student.js -->
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='assets/js/api.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='assets/js/student.js') }}" defer></script>
+</body>
+</html>
+

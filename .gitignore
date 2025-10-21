@@ -1,0 +1,17 @@
+# Instance folder (contains your database)
+instance/
+
+# Python cache
+__pycache__/
+
+# Uploaded files
+uploads/
+
+# Any .db file at the root (just in case)
+*.db
+
+# Compiled Python files
+*.pyc
+
+# Environment files
+.env
