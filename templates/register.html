@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Skill Tracker — Register</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Skill Tracker</div>
+      <div class="nav"><a href="{{ url_for('login_page') }}">Login</a></div>
+    </div>
+
+    <div class="card" style="max-width:640px;margin:0 auto;">
+      <h3>Register a New Account</h3>
+      <form id="register-form">
+        <div class="form-row"><label>Full Name</label><input type="text" name="name" required></div>
+        <div class="form-row"><label>Email</label><input type="email" name="email" required></div>
+        <div class="form-row"><label>Password</label><input type="password" name="password" required></div>
+        
+        <div class="form-row">
+          <label>Department</label>
+          <select name="department_id" id="department-select" required>
+            <option value="">Loading departments...</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Your Role</label>
+          <select name="role">
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+          </select>
+        </div>
+        <div class="form-row"><button type="submit">Register & Continue</button></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}" defer></script>
+</body>
+</html>

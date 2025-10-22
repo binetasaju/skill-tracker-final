@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Student Dashboard</div>
+      <button id="logout-btn">Logout</button>
+    </div>
+    <div class="card">
+      <h2>Welcome, <span id="student-name"></span>!</h2>
+      <p><b>Email:</b> <span id="student-email"></span></p>
+      <p><b>Department:</b> <span id="student-dept"></span></p>
+      <hr style="border:0; border-top:1px solid #eee; margin: 20px 0;">
+      <p>
+       <a href="{{ url_for('add_skill_page') }}" class="btn">Add a New Skill</a>
+       <a href="{{ url_for('my_skills_page') }}" class="btn">View My Skills</a>
+      </p>
+    </div>
+  </div>
+  <script src="../assets/js/storage.js" defer></script>
+  <script src="../assets/js/student.js" defer></script>
+</body>
+</html>

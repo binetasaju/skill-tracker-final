@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Tracker - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- 1. Updated CSS link to use Flask's url_for helper -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card" style="max-width: 480px; margin: 48px auto;">
+        <h2 class="center">Skill Tracker Login</h2>
+        <form id="login-form">
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-row">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <!-- 3. Updated Register link to use Flask's url_for helper -->
+        <p class="center text-muted">Don't have an account? <a href="{{ url_for('register_page') }}">Register here</a></p>
+    </div>
+  </div>
+
+  <!-- 2. Replaced old scripts with new ones (api.js and updated main.js) -->
+  <script src="{{ url_for('static', filename='assets/js/api.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+:root {
+  --accent: #4a90e2; /* A brighter, more modern blue */
+  --accent-dark: #357ABD;
+  --bg: #f4f7f9;
+  --card: #ffffff;
+  --muted: #8492a6;
+  --text-color: #3c4858;
+  --border-color: #e0e6ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 980px;
+  margin: 32px auto;
+  padding: 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.brand {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.nav a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(20, 20, 40, 0.04);
+}
+
+/* Forms & Buttons */
+.form-row {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 15px;
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+small.hint { color: var(--muted); }
+
+/* Table & Statuses */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+th {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.status-pending, .status-validated, .status-rejected {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.status-pending { background-color: #f59e0b; }
+.status-validated { background-color: #10b981; }
+.status-rejected { background-color: #ef4444; }
+
+/* Skill Card Display */
+.skill-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+}
+.skill-info { flex-grow: 1; }
+.skill-name {
+  margin: 0 0 4px 0;
+  color: var(--text-color);
+  font-weight: 600;
+}
+.skill-level {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  display: inline-block;
+  text-transform: capitalize;
+}
+.skill-level.beginner { background-color: #34d399; }
+.skill-level.intermediate { background-color: #f59e0b; }
+.skill-level.advanced { background-color: #ef4444; }
+
+/* Action Buttons in Table */
+td .approve-btn, td .reject-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-right: 6px;
+}
+.approve-btn {
+    background-color: #10b981;
+}
+.approve-btn:hover {
+    background-color: #059669;
+}
+.reject-btn {
+    background-color: #ef4444;
+}
+.reject-btn:hover {
+    background-color: #dc2626;
+}
+
+/* Utilities */
+.text-muted { color: var(--muted); }
+.center { text-align: center; }
+
+/* --- Button Style --- */
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 5px;
+  background-color: #007bff; /* Blue background */
+  color: #ffffff;             /* White text */
+  text-decoration: none;     /* Remove the underline */
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

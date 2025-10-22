@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Faculty Dashboard</div>
+      <button id="logout-btn">Logout</button>
+    </div>
+    <div class="card">
+      <h3>Student Skill Submissions</h3>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Student Email</th>
+              <th>Skill</th>
+              <th>Level</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="skill-submissions">
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../assets/js/storage.js" defer></script>
+  <script src="../assets/js/faculty.js" defer></script>
+</body>
+</html>
